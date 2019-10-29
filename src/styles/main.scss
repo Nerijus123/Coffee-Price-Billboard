@@ -1,0 +1,125 @@
+@import 'partials/variables';
+@import 'partials/mixins';
+@import 'partials/base';
+
+
+html {
+    font-size: 10px;
+  }
+
+p {
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+  
+h1 {
+    font-family: $font-family-title;
+    text-align: center;
+    font-size: 13rem;
+    margin: 2rem 0;
+    letter-spacing: -10px;
+    color: $brown;
+}
+  
+:global .photoGrid {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    // display: grid;
+    // grid-template-columns: repeat(4, 1fr);
+    // grid-gap: 10px;
+    
+  }
+  
+:global .figure {
+    flex-basis: 21%;
+    border: 1px solid $gray-400;
+    margin: 0 2rem 2rem 2rem;
+    padding: 2rem;
+    
+  }
+
+:global .photo {
+  width: calc(100% + 4rem);
+  margin: -2rem 0rem 0rem -2rem;
+
+} 
+
+:global .button-div {
+  display: flex;
+  justify-content: center;
+}
+
+:global .remove-button {
+  flex-basis: 48%;
+  font-size: 18px;
+  padding: 5px;
+}
+
+:global .addCoffeeIcon {
+  margin: 20px auto;
+  display: table;
+  padding: 40px;
+  background: url("https://image.flaticon.com/icons/svg/633/633652.svg") center no-repeat;
+  background-size: contain;
+  border: none;
+  color: $brown;
+}
+:global .coffeeForm {
+  background: $white;
+  margin: 0 auto;
+  max-width: 500px;
+  padding: 45px;
+  text-align: center;
+}
+
+:global .coffeeForm input {
+  width: 100%;
+  border: none;
+  padding: 25px;
+  box-sizing: border-box;
+  font-size: 20px;
+  margin: 0 0 15px;
+  background: $gray-300;
+}
+
+:global .addPhotoButton {
+  text-transform: uppercase;
+  width: 100%;
+  border: none;
+  padding: 15px;
+  font-size: 20px;
+  cursor: pointer;
+  background: $brown;
+  color: $white;
+}
+
+:global .addPhotoButton:hover {
+  color: $white;
+  filter: brightness(70%);
+}
+
+
+//overwrite bootstarp class
+:global .navbar-default {
+  background-color: $brown;
+  border-color: $brown;
+}
+
+:global .navbar-default .navbar-nav>li>a {
+  color: $white;
+}
+
+:global .navbar-default .navbar-brand {
+  font-size: 3rem;
+  color: $white; 
+}
+
+:global .navbar-default .navbar-brand:hover {
+  color: $gray-500;
+}
+
+:global .navbar-default .navbar-nav>li>a:hover {
+  color: $gray-500;
+}
